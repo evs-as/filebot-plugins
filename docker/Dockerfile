@@ -1,4 +1,4 @@
-FROM openjdk:8-jre
+FROM dordoka/rpi-java8
 
 MAINTAINER Reinhard Pointner <rednoah@filebot.net>
 
@@ -15,8 +15,8 @@ RUN apt-get update && apt-get install -y \
     inotify-tools \
  && rm -rf /var/lib/apt/lists/*
  
-RUN FILEBOT_SHA256=892723dcec8fe5385ec6665db9960e7c1a88e459a60525c02afb7f1195a50523 \
- && FILEBOT_PACKAGE=filebot_${FILEBOT_VERSION}_amd64.deb \
+RUN FILEBOT_SHA256=d7aa3f8d9af9a784853cd935e9a0770d743156991c1d9538b3b5f25b2a20b11d \
+ && FILEBOT_PACKAGE=filebot_${FILEBOT_VERSION}_armhf.deb \
  && curl -L -O https://downloads.sourceforge.net/project/filebot/filebot/FileBot_$FILEBOT_VERSION/$FILEBOT_PACKAGE \
  && echo "$FILEBOT_SHA256 *$FILEBOT_PACKAGE" | sha256sum --check --strict \
  && dpkg -i $FILEBOT_PACKAGE \
