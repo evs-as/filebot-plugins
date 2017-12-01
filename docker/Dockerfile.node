@@ -1,4 +1,4 @@
-FROM rednoah/filebot
+FROM evsas/filebot-rpi
 
 MAINTAINER Reinhard Pointner <rednoah@filebot.net>
 
