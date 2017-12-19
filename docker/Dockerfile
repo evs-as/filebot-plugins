@@ -1,4 +1,4 @@
-FROM dordoka/rpi-java8
+FROM armhf/openjdk:openjdk-8-jre
 
 MAINTAINER Reinhard Pointner <rednoah@filebot.net>
 
