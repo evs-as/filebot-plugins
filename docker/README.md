@@ -20,7 +20,7 @@ docker run -it -v $PWD:/volume1 -v data:/data evsas/filebot-rpi -script fn:sysin
 ```
 
 
-## filebot-rpi-node
+## filebot-rpi:node
 
 FileBot Node allows you to call the [amc script](https://www.filebot.net/forums/viewtopic.php?f=4&t=215) via a simple web interface.
 
@@ -36,7 +36,7 @@ docker run -it -v $PWD:/volume1 -v data:/data -p 5452:5452 -e FILEBOT_NODE_AUTH=
 ```
 
 
-## filebot-rpi-watcher
+## filebot-rpi:watcher
 
 The [`filebot-watcher`](https://github.com/evs-as/filebot-plugins/blob/master/docker/filebot-watcher) command-line tool watches a given folder and executes the [amc script](https://www.filebot.net/forums/viewtopic.php?f=4&t=215) on newly added files.
 
